@@ -5,13 +5,15 @@ import { Button, Container } from '@mui/material';
 import NavBar from './common/NavBar';
 import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './Router';
+import { NotificationProvider } from './contex/notification.contex';
 
 function App() {
   return (
-    <BrowserRouter>
+    <NotificationProvider>
+      <BrowserRouter>
       <AppRouter />
-    </BrowserRouter>
-    
+      </BrowserRouter>
+    </NotificationProvider>
   );
 }
 

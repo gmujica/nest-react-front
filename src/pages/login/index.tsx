@@ -1,12 +1,12 @@
 import { Container, Button, Grid, Paper, Box, Typography, TextField, Stack } from "@mui/material"
-import { ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, FC, FormEvent, useState } from "react"
 
 type LoginType = {
         username: string,
         password: string
 };
 
-export const LoginPage: React.FC<{}> = () => {
+export const LoginPage: FC<{}> = () => {
     const [loginData, setLoginData] = useState<LoginType>({
         username: "",
         password: ""
