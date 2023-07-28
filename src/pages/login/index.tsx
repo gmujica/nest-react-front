@@ -1,5 +1,8 @@
 import { Container, Button, Grid, Paper, Box, Typography, TextField, Stack } from "@mui/material"
 import { ChangeEvent, FC, FormEvent, useState } from "react"
+import { useNotification } from "../../contex/notification.contex";
+import { LoginValidate } from "../../utils/validateForm";
+import { error } from "console";
 
 type LoginType = {
         username: string,
@@ -7,6 +10,7 @@ type LoginType = {
 };
 
 export const LoginPage: FC<{}> = () => {
+    const { getError, getSuccess } = useNotification();
     const [loginData, setLoginData] = useState<LoginType>({
         username: "",
         password: ""
@@ -16,10 +20,12 @@ export const LoginPage: FC<{}> = () => {
     };
     const handleSubmit = (e:FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        console.log(loginData);
-        
+        LoginValidate.validate(loginData).then(() => {
+            getSuccess(JSON.stringify(loginData));
+        }).catch((error) => {
+            getError(error.message)
+        });
     };
-
     return (
         <Container maxWidth='sm'>
             <Grid 
@@ -33,8 +39,8 @@ export const LoginPage: FC<{}> = () => {
                     <Paper sx={{padding: "1.2em", borderRadius: "0.5em"}}>
                         <Typography sx={{mt:1,mb:1}} variant="h6">LogIn</Typography>
                         <Box component="form" onSubmit={handleSubmit}>
-                                <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} required onChange={dataLogin} />
-                                <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} required onChange={dataLogin} />
+                                <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataLogin} />
+                                <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataLogin} />
                             <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>logIn</Button>
                         </Box>
                     </Paper>
