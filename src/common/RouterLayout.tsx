@@ -1,11 +1,14 @@
-import { Outlet } from "@mui/icons-material"
-import NavBar from "./NavBar"
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { NavBar } from "./NavBar";
+
+
 
 export const RouterLayout: React.FC<{}> = () => {
-    return (
-        <>
-            <NavBar />
-            <Outlet />
-        </>
-    )
-}
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
+};

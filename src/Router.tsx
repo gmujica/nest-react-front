@@ -1,17 +1,19 @@
 import { dividerClasses } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/home";
 import { LoginPage } from "./pages/login";
 import { RouterLayout } from "./common/RouterLayout";
+import { RegisterPage } from "./pages/register";
 
-export const AppRouter: React.FC<{}> = () => {
+export const AppRouter: FC<{}> = () => {
     return(
         <Routes>
             <Route path="/" element={<RouterLayout />}>
-                <Route path="/" element={<HomePage />} /> 
+            <Route path="/" element={<HomePage />} />
             </Route>
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
         </Routes>
     );
 };
