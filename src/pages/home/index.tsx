@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from "react";
 import { Container, Button } from "@mui/material"
 import { useNotification } from "../../contex/notification.contex"
-import { HeaderComponent } from "../../components";
+import { CardComponent, HeaderComponent } from "../../components";
 import { characters } from "../../api/characters";
 
 export const HomePage: FC<{}> = () => {
