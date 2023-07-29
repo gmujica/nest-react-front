@@ -7,11 +7,14 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Container, Grid, Stack } from '@mui/material';
+import { FC } from 'react';
+import { useNavigate } from "react-router-dom";
 
-export default function NavBar() {
+export const NavBar: FC<{}> = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+      <AppBar position="sticky">
         <Toolbar>
             <Container maxWidth='xl'>
                 <Grid 
@@ -25,7 +28,7 @@ export default function NavBar() {
                     </Grid>
                     <Grid item>
                         <Stack direction="row" spacing={2}>
-                            <Button variant="outlined">Login</Button>
+                            <Button variant="outlined" onClick={() => navigate("login")}>Login</Button>
                             <Button variant="contained">Register</Button>
                         </Stack>
                     </Grid>
