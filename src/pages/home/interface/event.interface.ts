@@ -1,5 +1,5 @@
 export interface EventInterface {
-    id:       number;
+    /*id:       number;
     name:     string;
     status:   string;
     species:  string;
@@ -10,10 +10,16 @@ export interface EventInterface {
     image:    string;
     episode:  string[];
     url:      string;
-    created:  Date;
+    created:  Date;*/
+    event_id:   string;
+    title:      string;
+    descrption: string;
+    created_at: Date;
+    updated_at: Date;
+    user:       {};
 }
 
-export interface Location {
+/*export interface Location {
     name: string;
     url:  string;
-}
+}*/

@@ -16,7 +16,7 @@ export const HeaderComponent: FC<HeaderProps> = ({title, description, element}) 
                     <Grid item xs={5}>
                         <Grid container direction="column" justifyContent="center" alignItems="center" sx={{height:"100%"}}>
                             <Grid item>
-                                <Typography variant="h1">
+                                <Typography variant="h2">
                                     {title}
                                 </Typography>
                             </Grid>
