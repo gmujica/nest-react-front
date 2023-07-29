@@ -11,7 +11,7 @@ export const HomePage: FC<{}> = () => {
           description="hola mundo description lorem improvisado"
           element={
             <Button fullWidth variant="contained">
-              Hola mundo
+              Home Page
             </Button>
           }
         />
