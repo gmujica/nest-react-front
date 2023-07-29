@@ -2,7 +2,7 @@ import { Container, Button, Grid, Paper, Box, Typography, TextField, Stack } fro
 import { ChangeEvent, FC, FormEvent, useState } from "react"
 import { useNotification } from "../../contex/notification.contex";
 import { LoginValidate } from "../../utils/validateForm";
-import { error } from "console";
+
 
 type LoginType = {
         username: string,
@@ -15,17 +15,19 @@ export const LoginPage: FC<{}> = () => {
         username: "",
         password: ""
     });
-    const dataLogin = (e: ChangeEvent<HTMLInputElement>) => {
-        setLoginData({...loginData, [e.target.name]:e.target.value});
+    const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setLoginData({ ...loginData, [e.target.name]: e.target.value });
     };
-    const handleSubmit = (e:FormEvent<HTMLInputElement>) => {
-        e.preventDefault();
-        LoginValidate.validate(loginData).then(() => {
-            getSuccess(JSON.stringify(loginData));
-        }).catch((error) => {
-            getError(error.message)
-        });
-    };
+    const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    LoginValidate.validate(loginData)
+      .then(() => {
+        getSuccess(JSON.stringify(loginData));
+      })
+      .catch((error) => {
+        getError(error.message);
+      });
+  };
     return (
         <Container maxWidth='sm'>
             <Grid 
