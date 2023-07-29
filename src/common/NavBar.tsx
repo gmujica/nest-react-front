@@ -29,7 +29,7 @@ export const NavBar: FC<{}> = () => {
                     <Grid item>
                         <Stack direction="row" spacing={2}>
                             <Button variant="outlined" onClick={() => navigate("login")}>Login</Button>
-                            <Button variant="contained">Register</Button>
+                            <Button variant="contained" onClick={() => navigate("register")}>Register</Button>
                         </Stack>
                     </Grid>
                 </Grid>
