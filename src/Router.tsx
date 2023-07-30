@@ -5,12 +5,14 @@ import { LoginPage } from "./pages/login";
 import { RouterLayout } from "./common/RouterLayout";
 import { RegisterPage } from "./pages/register";
 import CardDetailsPage from "./pages/cardDetails";
+import { CreateEventPage } from "./pages/CreateEvent";
 
 export const AppRouter: FC<{}> = () => {
     return(
         <Routes>
             <Route path="/" element={<RouterLayout />}>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/create" element={<CreateEventPage />} />
                 <Route path="/card/:event_id" element={<CardDetailsPage />} />
             </Route>
             <Route path="/login" element={<LoginPage />} />

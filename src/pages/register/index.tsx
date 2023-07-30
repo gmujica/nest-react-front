@@ -45,6 +45,7 @@ export const RegisterPage: FC<{}> = () => {
                                 <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataRegister} />
                                 <TextField name="rpassword" margin="normal" type="password" fullWidth label="Repeat Password" sx={{mt:1.5,mb:1.5}} />
                             <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>Register</Button>
+                            <Button fullWidth variant="outlined"  href="/">Back</Button>
                         </Box>
                     </Paper>
                 </Grid>

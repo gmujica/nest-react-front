@@ -28,9 +28,12 @@ export const HomePage: FC<{}> = (Props) => {
         title="Event manager"
         description="NestJS + React App"
         element={
-          <Button fullWidth variant="contained">
-            event manager
-          </Button>
+          <Link to={'/create'} style={{ textDecoration: "none" }}>
+            <Button fullWidth variant="contained">
+              Create New Event
+            </Button>
+          </Link>
+          
         }
       />
       <Box my={2}>

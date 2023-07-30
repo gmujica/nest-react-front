@@ -4,25 +4,25 @@ import { useNotification } from "../../contex/notification.contex";
 import { LoginValidate } from "../../utils/validateForm";
 
 
-type LoginType = {
+type RegisterType = {
         username: string,
         password: string
 };
 
-export const LoginPage: FC<{}> = () => {
+export const CreateEventPage: FC<{}> = () => {
     const { getError, getSuccess } = useNotification();
-    const [loginData, setLoginData] = useState<LoginType>({
+    const [registerData, setregisterData] = useState<RegisterType>({
         username: "",
         password: ""
     });
-    const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setLoginData({ ...loginData, [e.target.name]: e.target.value });
+    const dataRegister = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setregisterData({ ...registerData, [e.target.name]: e.target.value });
     };
     const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
-    LoginValidate.validate(loginData)
+    LoginValidate.validate(registerData)
       .then(() => {
-        getSuccess(JSON.stringify(loginData));
+        getSuccess(JSON.stringify(registerData));
       })
       .catch((error) => {
         getError(error.message);
@@ -39,11 +39,12 @@ export const LoginPage: FC<{}> = () => {
             >
                 <Grid item>
                     <Paper sx={{padding: "1.2em", borderRadius: "0.5em"}}>
-                        <Typography sx={{mt:1,mb:1}} variant="h6">LogIn</Typography>
+                        <Typography sx={{mt:1,mb:1}} variant="h6">Create New Event</Typography>
                         <Box component="form" onSubmit={handleSubmit}>
-                                <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataLogin} />
-                                <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataLogin} />
-                            <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>logIn</Button>
+                                <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataRegister} />
+                                <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataRegister} />
+                                <TextField name="rpassword" margin="normal" type="password" fullWidth label="Repeat Password" sx={{mt:1.5,mb:1.5}} />
+                            <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>Create</Button>
                             <Button fullWidth variant="outlined"  href="/">Back</Button>
                         </Box>
                     </Paper>
