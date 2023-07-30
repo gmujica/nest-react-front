@@ -1,26 +1,26 @@
 import { Container, Button, Grid, Paper, Box, Typography, TextField, Stack } from "@mui/material"
 import { ChangeEvent, FC, FormEvent, useState } from "react"
 import { useNotification } from "../../contex/notification.contex";
-import { LoginValidate } from "../../utils/validateForm";
+import { CreateEventValidate } from "../../utils/validateForm";
 
 
 type RegisterType = {
-        username: string,
-        password: string
+        title: string,
+        description: string
 };
 
 export const CreateEventPage: FC<{}> = () => {
     const { getError, getSuccess } = useNotification();
     const [registerData, setregisterData] = useState<RegisterType>({
-        username: "",
-        password: ""
+        title: "",
+        description: ""
     });
     const dataRegister = (e: React.ChangeEvent<HTMLInputElement>) => {
         setregisterData({ ...registerData, [e.target.name]: e.target.value });
     };
     const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
-    LoginValidate.validate(registerData)
+    CreateEventValidate.validate(registerData)
       .then(() => {
         getSuccess(JSON.stringify(registerData));
       })
@@ -41,9 +41,8 @@ export const CreateEventPage: FC<{}> = () => {
                     <Paper sx={{padding: "1.2em", borderRadius: "0.5em"}}>
                         <Typography sx={{mt:1,mb:1}} variant="h6">Create New Event</Typography>
                         <Box component="form" onSubmit={handleSubmit}>
-                                <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataRegister} />
-                                <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataRegister} />
-                                <TextField name="rpassword" margin="normal" type="password" fullWidth label="Repeat Password" sx={{mt:1.5,mb:1.5}} />
+                                <TextField name="title" margin="normal" type="text" fullWidth label="Title" sx={{mt:2,mb:1.5}} onChange={dataRegister} />
+                                <TextField name="description" margin="normal" type="text" fullWidth label="Description" sx={{mt:2,mb:1.5}} onChange={dataRegister} />
                             <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>Create</Button>
                             <Button fullWidth variant="outlined"  href="/">Back</Button>
                         </Box>

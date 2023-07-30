@@ -14,7 +14,7 @@ interface EventInterface {
 export const fetchData = async (): Promise<AxiosResponse<EventInterface[]>> => {
   try {
     const response: AxiosResponse<EventInterface[]> = await axios.get(
-      "http://localhost:3000/event" // Replace with your GET API endpoint
+      "http://localhost:3000/event"
     );
     return response;
   } catch (error) {
@@ -27,7 +27,7 @@ export const fetchEventDetails = async (
 ): Promise<AxiosResponse<EventInterface>> => {
   try {
     const response: AxiosResponse<EventInterface> = await axios.get(
-      `http://localhost:3000/event/${event_id}` // Use the same API URL as fetchData
+      `http://localhost:3000/event/${event_id}`
     );
     return response;
   } catch (error) {
@@ -46,28 +46,7 @@ export const fetchEventDetails = async (
     throw new Error("Error creating data");
   }
 };
-
-export const updateData = async (updatedData: EventInterface): Promise<AxiosResponse<EventInterface>> => {
-  try {
-    const response: AxiosResponse<EventInterface> = await axios.put(
-      `https://api.example.com/users/${updatedData.id}`, // Replace with your PUT API endpoint
-      updatedData
-    );
-    return response;
-  } catch (error) {
-    throw new Error("Error updating data");
-  }
-};
-
-export const deleteData = async (id: string): Promise<void> => {
-  try {
-    await axios.delete(
-      `https://api.example.com/users/${id}` // Replace with your DELETE API endpoint
-    );
-  } catch (error) {
-    throw new Error("Error deleting data");
-  }
-};*/
+;*/
 
 const DataFetcher: React.FC = () => {
   return null
