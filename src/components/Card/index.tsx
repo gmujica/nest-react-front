@@ -6,7 +6,7 @@ import {
     CardMedia, 
     Divider, 
     Typography 
-} from "@mui/material"
+} from "@mui/material";
 import { FC } from "react"
 
 type CardProps ={
@@ -14,6 +14,7 @@ type CardProps ={
     descrption: string;
     created_at: string;
     updated_at: string;
+    event_id: string;
 }
 export const CardComponent: FC<CardProps> = ({title, descrption, created_at, updated_at}) => {
     return (
@@ -32,7 +33,9 @@ export const CardComponent: FC<CardProps> = ({title, descrption, created_at, upd
                 <Typography sx={{mt: 1.5}}>updated: {updated_at}</Typography>
             </CardContent>
             <CardActions>
-                <Button fullWidth variant="contained" size="small">Learn More</Button>
+                <Button fullWidth variant="contained" size="small">
+                    Learn More
+                </Button>
             </CardActions>
         </Card>
     )
