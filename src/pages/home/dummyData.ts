@@ -2,7 +2,7 @@ export const dymmyData = [
     {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -16,7 +16,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -29,7 +29,7 @@ export const dymmyData = [
         {
           "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
           "title": "event11111",
-          "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
           "created_at": "2023-07-27T02:14:25.835Z",
           "updated_at": "2023-07-27T02:14:25.835Z",
           "user": {
@@ -43,7 +43,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -57,7 +57,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -71,7 +71,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -85,7 +85,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {
@@ -99,7 +99,7 @@ export const dymmyData = [
       {
         "event_id": "ae77987d-e6ea-48e7-8e03-bf7c9f0d6684",
         "title": "event11111",
-        "descrption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         "created_at": "2023-07-27T02:14:25.835Z",
         "updated_at": "2023-07-27T02:14:25.835Z",
         "user": {

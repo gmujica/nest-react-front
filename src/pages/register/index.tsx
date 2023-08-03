@@ -41,6 +41,7 @@ export const RegisterPage: FC<{}> = () => {
                     <Paper sx={{padding: "1.2em", borderRadius: "0.5em"}}>
                         <Typography sx={{mt:1,mb:1}} variant="h6">Register</Typography>
                         <Box component="form" onSubmit={handleSubmit}>
+                                <TextField name="name" margin="normal" type="text" fullWidth label="Name" sx={{mt:2,mb:1.5}} />
                                 <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataRegister} />
                                 <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataRegister} />
                                 <TextField name="rpassword" margin="normal" type="password" fullWidth label="Repeat Password" sx={{mt:1.5,mb:1.5}} />

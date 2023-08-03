@@ -13,7 +13,9 @@ export const HomePage: FC<{}> = (Props) => {
     fetchData()
       .then((response) => {
         console.log("Fetched Data:", response.data);
-        setAllEvents(response.data);
+        // Sort the events by created_at in descending order (most recent first)
+        const sortedEvents = response.data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+        setAllEvents(sortedEvents);
         setLoading(false);
       })
       .catch((error) => {
@@ -21,6 +23,7 @@ export const HomePage: FC<{}> = (Props) => {
         setLoading(false);
       });
   }, []);
+  
 
   return (
     <Container sx={{ mt: 9 }} maxWidth="xl">
@@ -46,10 +49,10 @@ export const HomePage: FC<{}> = (Props) => {
             {allEvents.map((e) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={e.event_id}>
                 <Link to={`/card/${e.event_id}`} style={{ textDecoration: "none" }}>
-                <CardComponent
+                  <CardComponent
                     //image={}
                     title={e.title}
-                    descrption={e.descrption}
+                    description={e.description}
                     created_at={e.created_at.toString()}
                     updated_at={e.updated_at.toString()} 
                     event_id={e.event_id}

@@ -11,12 +11,12 @@ import { FC } from "react"
 
 type CardProps ={
     title: string;
-    descrption: string;
+    description: string;
     created_at: string;
     updated_at: string;
     event_id: string;
 }
-export const CardComponent: FC<CardProps> = ({title, descrption, created_at, updated_at}) => {
+export const CardComponent: FC<CardProps> = ({title, description, created_at, updated_at}) => {
     return (
         <Card>
             <CardMedia 
@@ -28,7 +28,7 @@ export const CardComponent: FC<CardProps> = ({title, descrption, created_at, upd
             <CardContent>
                 <Typography sx={{mb: 1.5}} variant="h4">Title: {title}</Typography>
                 <Divider />
-                <Typography sx={{mt: 1.5}}>Description: {descrption}</Typography>
+                <Typography sx={{mt: 1.5}}>Description: {description}</Typography>
                 <Typography sx={{mt: 1.5}}>created: {created_at}</Typography>
                 <Typography sx={{mt: 1.5}}>updated: {updated_at}</Typography>
             </CardContent>

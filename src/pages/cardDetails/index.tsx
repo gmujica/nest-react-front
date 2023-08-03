@@ -43,7 +43,7 @@ const CardDetailsPage: React.FC = () => {
           <Paper sx={{padding: "1.2em", borderRadius: "0.5em"}}>
             <Typography variant="h4">Event Details</Typography>
             <Typography variant="h6">Title: {eventDetails.title}</Typography>
-            <Typography>Description: {eventDetails.descrption}</Typography>
+            <Typography>Description: {eventDetails.description}</Typography>
             <Typography>Created At: {eventDetails.created_at.toString()}</Typography>
             <Typography>Updated At: {eventDetails.updated_at.toString()}</Typography>
           </Paper>

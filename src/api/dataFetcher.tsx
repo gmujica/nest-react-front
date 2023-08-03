@@ -5,7 +5,7 @@ import axios, { AxiosResponse } from "axios";
 interface EventInterface {
     event_id:   string;
     title:      string;
-    descrption: string;
+    description: string;
     created_at: Date;
     updated_at: Date;
     user:       {};
@@ -35,18 +35,19 @@ export const fetchEventDetails = async (
   }
 };
 
-/*export const createData = async (newData: EventInterface): Promise<AxiosResponse<EventInterface>> => {
+export const createEvent = async (newDataEvent: EventInterface): Promise<EventInterface> => {
   try {
     const response: AxiosResponse<EventInterface> = await axios.post(
-      "https://api.example.com/users", // Replace with your POST API endpoint
-      newData
+      "http://localhost:3000/event/",
+      newDataEvent
     );
-    return response;
+    return response.data; // Return the response data after successful creation
   } catch (error) {
     throw new Error("Error creating data");
   }
 };
-;*/
+
+
 
 const DataFetcher: React.FC = () => {
   return null
