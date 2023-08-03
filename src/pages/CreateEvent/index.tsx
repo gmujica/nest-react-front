@@ -4,6 +4,7 @@ import { useNotification } from "../../contex/notification.contex";
 import { CreateEventValidate } from "../../utils/validateForm";
 import { createEvent, fetchEventDetails } from "../../api/dataFetcher";
 import { v4 as uuidv4 } from "uuid";
+import { log } from "console";
 
 
 type RegisterType = {
@@ -28,27 +29,23 @@ const handleSubmit = async (e: React.FormEvent<HTMLInputElement>) => {
   e.preventDefault();
   try {
     await CreateEventValidate.validate(registerData);
-
-    // Generate a new UUID for the event_id property
     const newEventId = uuidv4();
 
-    // Create a new event using the data from the form
     const response = await createEvent({
       title: registerData.title,
       description: registerData.description,
-      event_id: newEventId, // Use the generated UUID for event_id
+      event_id: newEventId, 
       created_at: new Date(),
       updated_at: new Date(),
-      user: "e6053a7c-ade4-49a0-9d57-4071932ac916",// this is the user fron database
+      user: "e6053a7c-ade4-49a0-9d57-4071932ac916",
     });
 
-    // ... (rest of the code)
   } catch (error) {
-    // ... (error handling code)
+    console.log(e);
+    //getError(error.message);
+    
   }
 };
-  
-
   return (
     <Container maxWidth="sm">
       <Grid container direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: "100vh" }}>
