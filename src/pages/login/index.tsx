@@ -44,6 +44,7 @@ export const LoginPage: FC<{}> = () => {
                                 <TextField name="username" margin="normal" type="text" fullWidth label="Email" sx={{mt:2,mb:1.5}} onChange={dataLogin} />
                                 <TextField name="password" margin="normal" type="password" fullWidth label="Password" sx={{mt:1.5,mb:1.5}} onChange={dataLogin} />
                             <Button fullWidth type="submit" variant="contained" sx={{mt:1.5,mb:3}}>logIn</Button>
+                            <Button fullWidth variant="outlined"  href="/">Back</Button>
                         </Box>
                     </Paper>
                 </Grid>
