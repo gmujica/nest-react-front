@@ -37,13 +37,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLInputElement>) => {
       event_id: newEventId, 
       created_at: new Date(),
       updated_at: new Date(),
-      user: "e6053a7c-ade4-49a0-9d57-4071932ac916",
+      user: "92357ae3-3a81-44d0-9433-9c37c138e864",// user id (need create a user first)
     });
 
   } catch (error) {
     console.log(e);
     //getError(error.message);
-    
   }
 };
   return (
