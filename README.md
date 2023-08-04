@@ -26,11 +26,11 @@ The service will be lifted in http://localhost:3000
 ## Screens
 
 ### `Home`
-![img](docs\1.png)
+![img](docs/1.png)
 ### `New Event`
-![img](docs\2.png)
+![img](docs/2.png)
 ### `Register User`
-![img](docs\3.png)
+![img](docs/3.png)
 ### `Event details`
-![img](docs\4.png)
+![img](docs/4.png)
 
